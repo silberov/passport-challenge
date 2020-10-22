@@ -8,21 +8,18 @@ import "./App.css";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
+    this.state = {};
   }
-
 
   render() {
     return (
       <div className="App">
         <h1>Challenge: create a passport for Wendy Sulca</h1>
         <form>
-          <input  placeholder="First Name"   />
-          <input  placeholder="Last Name" />
-          <input  placeholder="Nationality" />
-          <input  placeholder="Place of Birth" />
+          <input placeholder="First Name" />
+          <input placeholder="Last Name" />
+          <input placeholder="Nationality" />
+          <input placeholder="Place of Birth" />
         </form>
         <div className="passport">
           <h2>Peruvian Republic Passport</h2>
@@ -33,18 +30,16 @@ class App extends React.Component {
             />
             <div className="results">
               <div className="flex">
-                <p>First Name:  </p>
+                <p>First Name: </p>
                 <p className="value"></p>
               </div>
               <div className="flex">
                 <p>Last Name: </p>
                 <p className="value"></p>
-
               </div>
               <div className="flex">
                 <p>Nationality: </p>
                 <p className="value"></p>
-
               </div>
               <div className="flex">
                 <p>Place of Birth: </p>
