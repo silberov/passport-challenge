@@ -8,18 +8,32 @@ import "./App.css";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { firstName: "",
+    lastName: "",
+    nationality: "",
+    birthPlace:""
   }
+  }
+
+   handleChange = (event) => {
+    this.setState({[event.target.name]: event.target.value},()=>{
+      console.log("my state:", this.state)
+    });
+    //console.log(event.target.value);
+    //console.log(event.target.name);
+  }
+
+  
 
   render() {
     return (
       <div className="App">
         <h1>Challenge: create a passport for Wendy Sulca</h1>
         <form>
-          <input placeholder="First Name" />
-          <input placeholder="Last Name" />
-          <input placeholder="Nationality" />
-          <input placeholder="Place of Birth" />
+          <input type="text" name="firstName" placeholder="First Name" onChange={this.handleChange} />
+          <input type="text" name="lastName" placeholder="Last Name" onChange={this.handleChange} />
+          <input type="text" name="nationality" placeholder="Nationality" onChange={this.handleChange} />
+          <input type="text" name="birthPlace" placeholder="Place of Birth" onChange={this.handleChange} />
         </form>
         <div className="passport">
           <h2>Peruvian Republic Passport</h2>
@@ -30,20 +44,20 @@ class App extends React.Component {
             />
             <div className="results">
               <div className="flex">
-                <p>First Name: </p>
-                <p className="value"></p>
+                <p>First Name:</p>
+                <p className="value">{this.state.firstName}</p>
               </div>
               <div className="flex">
                 <p>Last Name: </p>
-                <p className="value"></p>
+                <p className="value">{this.state.lastName}</p>
               </div>
               <div className="flex">
                 <p>Nationality: </p>
-                <p className="value"></p>
+                <p className="value">{this.state.nationality}</p>
               </div>
               <div className="flex">
                 <p>Place of Birth: </p>
-                <p className="value"></p>
+                <p className="value">{this.state.birthPlace}</p>
               </div>
             </div>
           </div>
