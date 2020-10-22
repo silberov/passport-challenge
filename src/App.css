@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  margin: 20px;
 }
 
 .profile {
@@ -8,6 +8,8 @@
 }
 
 .passport {
+  text-align: center;
+
   border: 2px solid black;
   height: 300px;
   width: 500px;
@@ -30,4 +32,10 @@ input {
 }
 .results {
   margin-left: 20px;
+}
+
+
+.value {
+  margin-left: 10px;
+  font-weight: 600;
 }
